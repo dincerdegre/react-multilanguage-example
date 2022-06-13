@@ -71,3 +71,17 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
+## Extra Packages
+
+### i18next and react-i18next
+
+Added multilanguage support 
+
+### i18next-browser-languagedetector and i18next-http-backend
+
+Added Browser Language Detector
+
+### styled-components
+
+For Styling Selector
+
