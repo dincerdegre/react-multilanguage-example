@@ -68,12 +68,11 @@ const LanguageSelector = ({ onChangeLanguage, defaultLanguageValue }) => {
     setIsOpen((prev) => {
       return !prev;
     });
-  const [selectedOptionValue, setSelectedOptionValue] = useState(null);
+
   const [selectedOptionTitle, setSelectedOptionTitle] = useState(null);
 
   const selectedClickHandler = (option) => {
     console.log(option);
-    setSelectedOptionValue(option["value"]);
     setSelectedOptionTitle(option["title"]);
     onChangeLanguage(option["value"]);
     setIsOpen(false);
@@ -85,10 +84,9 @@ const LanguageSelector = ({ onChangeLanguage, defaultLanguageValue }) => {
             const selectedOption = dropDownOptions.find(
             (option) => option.value === defaultLanguageValue
             );
-            setSelectedOptionValue(selectedOption.value);
             setSelectedOptionTitle(selectedOption.title);
         }
-    },[]);
+    },[defaultLanguageValue]);
 
   return (
     <DropDownContainer>
