@@ -80,10 +80,12 @@ const LanguageSelector = ({ onChangeLanguage, defaultLanguageValue }) => {
   };
 
     useEffect(() => {
+      const defaultLang = defaultLanguageValue.substring(0,2);
         if (defaultLanguageValue) {
             const selectedOption = dropDownOptions.find(
-            (option) => option.value === defaultLanguageValue
+            (option) => option.value === defaultLang
             );
+            console.log(selectedOption);
             setSelectedOptionTitle(selectedOption.title);
         }
     },[defaultLanguageValue]);
